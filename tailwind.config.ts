@@ -11,6 +11,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        customDarkBlue: 'rgb(18 50 68)', // Medium blue
       },
     },
   },
