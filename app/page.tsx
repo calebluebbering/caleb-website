@@ -44,9 +44,8 @@ export default function Page() {
               </p>
               <p>
                 Currently, I am a student at Missouri State University, and plan on 
-                graduating in May 2025 with a Bachelor
-                &apos s in Computer Science, a mathematics
-                minor, and a certificate in web development. My desire for knowledge and ability
+                graduating in May 2025 with a Bachelor's in Computer Science, a minor in 
+                mathematics, and a certificate in web development. My desire for knowledge and ability
                 to be self-taught has led me to my success in academics, as well as in my personal pursuits.
               </p>
               <p>
@@ -147,7 +146,7 @@ export default function Page() {
                   <h3 className="text-xl font-semibold">Wordle Helper</h3>
                   <p className="text-slate-400 text-sm">2022</p>
                   <p className="text-slate-400 pt-2">
-                    A Universal Windows Platform app to help solve New York Times &apos daily Wordle.
+                    A Universal Windows Platform app to help solve New York Times' daily Wordle.
                     Inspired by the idea of beating my family.
                   </p>
                   <div className="flex flex-wrap gap-2 mt-4">
