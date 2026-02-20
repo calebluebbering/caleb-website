@@ -14,7 +14,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata = {
+export const metadata : Metadata = {
   title: {
     default: "Caleb Luebbering",
     template: "%s | Caleb Luebbering",
