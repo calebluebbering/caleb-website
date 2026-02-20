@@ -1,9 +1,7 @@
-import TempPage from "@/app/legacy/page"
-
 export default function Page() {
   return ( 
     <>
-        <TempPage/>
+      Scrapbook
     </>
   );
 }
