@@ -1,21 +1,40 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "./banner.css";
+import { usePathname } from "next/navigation";
 
 export default function Banner({
   src = "/me-w-camera.jpg",
   name = "Caleb Luebbering",
 }) {
   const [passionsOpen, setPassionsOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY && window.scrollY > 100) {
+        setHidden(true); // scrolling down
+      } else {
+        setHidden(false); // scrolling up
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Career", href: "/career" },
     {
-      label: "Other Passions",
+      label: "Passions",
       dropdown: [
         { label: "Music", href: "/passions/music" },
         { label: "Movies & TV", href: "/passions/movies" },
@@ -26,21 +45,18 @@ export default function Banner({
   ];
 
   return (
-    <header className="banner">
+    <header className={`banner ${hidden ? "banner--hidden" : ""}`}>
       <div className="banner__inner">
-
-        {/* Avatar */}
         <div className="banner__avatar">
           <Image
             src={src}
             alt="Profile"
-            width={140}
-            height={140}
+            width={120}
+            height={120}
             className="banner__avatar-img"
           />
         </div>
 
-        {/* Name + Nav */}
         <div className="banner__center">
           <h1 className="banner__name">{name}</h1>
 
@@ -50,7 +66,11 @@ export default function Banner({
                 item.dropdown ? (
                   <li
                     key={item.label}
-                    className="banner__nav-item banner__nav-item--has-dropdown"
+                    className={`banner__nav-item banner__nav-item--has-dropdown ${
+                      item.dropdown.some((sub) => sub.href === pathname)
+                        ? "banner__nav-item--active"
+                        : ""
+                    }`}
                     onMouseEnter={() => setPassionsOpen(true)}
                     onMouseLeave={() => setPassionsOpen(false)}
                   >
@@ -58,10 +78,19 @@ export default function Banner({
                       {item.label} ▾
                     </button>
 
-                    <ul className={`banner__dropdown${passionsOpen ? " banner__dropdown--open" : ""}`}>
+                    <ul
+                      className={`banner__dropdown${
+                        passionsOpen ? " banner__dropdown--open" : ""
+                      }`}
+                    >
                       {item.dropdown.map((sub) => (
                         <li key={sub.label} className="banner__dropdown-item">
-                          <Link href={sub.href} className="banner__dropdown-link">
+                          <Link
+                            href={sub.href}
+                            className={`banner__dropdown-link ${
+                              pathname === sub.href ? "banner__nav-item--active" : ""
+                            }`}
+                          >
                             {sub.label}
                           </Link>
                         </li>
@@ -69,7 +98,12 @@ export default function Banner({
                     </ul>
                   </li>
                 ) : (
-                  <li key={item.label} className="banner__nav-item">
+                  <li
+                    key={item.label}
+                    className={`banner__nav-item ${
+                      pathname === item.href ? "banner__nav-item--active" : ""
+                    }`}
+                  >
                     <Link href={item.href} className="banner__nav-link">
                       {item.label}
                     </Link>
@@ -80,26 +114,68 @@ export default function Banner({
           </nav>
         </div>
 
-        {/* Filler */}
         <div className="banner__filler">
-
-          {/* Social Links */}
-          <div className="flex justify-center space-x-6 pt-2">
-            <a href="https://github.com/calebluebbering"
-               target="_blank"
-               rel="noopener noreferrer"
-               className="social-icon">
-              <img src="/github-mark.svg" alt="GitHub Icon" className="w-8 h-8"/>
+          <div id="FillerIcons" className="flex justify-center space-x-6 pt-2">
+            <a
+              href="https://github.com/calebluebbering"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+            >
+              <img src="/github-mark.svg" className="w-7 h-7" />
             </a>
-            <a href="https://www.linkedin.com/in/caleb-luebbering/"
-               target="_blank"
-               rel="noopener noreferrer"
-               className="social-icon">
-              <img src="/LinkedIn.svg" alt="GitHub Icon" className="w-8 h-8"/>
+
+            <a
+              href="https://www.linkedin.com/in/caleb-luebbering/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+            >
+              <img src="/LinkedIn.svg" className="w-7 h-7" />
             </a>
           </div>
-        </div>
 
+          <div id="FillerHamburger" className="flex justify-center space-x-6 pt-2">
+            <button
+              className={`hamburger ${mobileOpen ? "hamburger--open" : ""}`}
+              onClick={() => setMobileOpen(!mobileOpen)}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+          </div>
+
+          {/* Mobile Menu */}
+          <div className={`mobile-menu ${mobileOpen ? "mobile-menu--open" : ""}`}>
+            {navLinks.map((item) =>
+              item.dropdown ? (
+                <div key={item.label} className="mobile-menu__group">
+                  <span className="mobile-menu__title">{item.label}</span>
+                  {item.dropdown.map((sub) => (
+                    <Link
+                      key={sub.label}
+                      href={sub.href}
+                      className="mobile-menu__link"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {sub.label}
+                    </Link>
+                  ))}
+                </div>
+              ) : (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="mobile-menu__link"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
+          </div>
+        </div>
       </div>
     </header>
   );

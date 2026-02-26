@@ -5,17 +5,132 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --bg-dark: #0f172a;           /* deep slate */
+  --bg-glass: rgba(15, 23, 42, 0.65);
+  --text-primary: #f8fafc;      /* soft white */
+  --text-secondary: #94a3b8;    /* muted slate */
+  --border-soft: rgba(255,255,255,0.08);
+  --accent: #38f8e8;            /* electric blue */
+  --accent-glow: rgba(56, 189, 248, 0.4);
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #393939;
     --foreground: #ededed;
   }
 }
 
 body {
+  padding-top: 180px;
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+@media (max-width: 860px) {
+  body {
+    padding-top: 100px;
+  }
+}
+
+.home {
+  background: #f0f0f0;
+  color: #f8fafc;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+
+
+/************
+    HERO
+************/
+.hero {
+  padding-top: 140px;
+  padding-bottom: 8rem;
+  text-align: center;
+}
+
+.hero__tag {
+  color: #38bdf8;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero__title {
+  font-size: 4rem;
+  font-weight: 600;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #293655;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),   /* subtle bottom shadow for depth */
+    0 0 12px rgba(255, 255, 255, 0.1); /* gentle glow for a modern touch */
+}
+.hero__subtitle {
+  margin-top: 1.5rem;
+  color: #94a3b8;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+  font-size: 1.1rem;
+}
+
+/************
+   BUTTONS
+************/
+.btn {
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: var(white);
+}
+
+.btn--primary:hover {
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+}
+
+.btn--ghost {
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #f8fafc;
+}
+
+.btn--ghost:hover {
+  border-color: #38bdf8;
+}
+
+/************
+    SECTIONS
+************/
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  max-width: 800px;
+  color: #293655;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),   /* subtle bottom shadow for depth */
+}
+.section-title span {
+  font-size: 1rem;
+  font-weight: 600;
+  max-width: 800px;
+  color: #293655;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),   /* subtle bottom shadow for depth */
 }

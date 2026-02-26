@@ -1,14 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Jost:wght@300;400;500&display=swap');
 
 /* ── Colors ── */
-:root {
-  --cream: #f5efe6;
-  --warm-white: #faf7f2;
-  --gold: #e9c581;
-  --muted: rgba(245, 239, 230, 0.575);
-  --nav-blur: rgba(10,8,6,0.55);
-  --maroon: rgba(103, 14, 34, 0.93);
-}
+
 
 /* ── Reset ── */
 .banner *, .banner *::before, .banner *::after {
@@ -19,11 +12,23 @@
 
 /* ── Banner Container ── */
 .banner {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 2.5rem 2rem;
-  background: linear-gradient(135deg, #123244 , #0D1A21);
-  color: var(--cream);
+  padding: 1.2rem 2rem;
+  background: var(--bg-glass);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  border-bottom: 1px solid var(--border-soft);
+  color: var(--text-primary);
   font-family: 'Jost', sans-serif;
+  z-index: 999;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+.banner--hidden {
+  transform: translateY(-100%);
+  opacity: 0;
 }
 
 /* Inner layout */
@@ -62,8 +67,8 @@
   font-size: 3.7rem;
   font-weight: 600;
   margin-bottom: 1.2rem;
-  color: var(--warm-white);
-  text-shadow: 0 2px 15px rgba(0,0,0,0.3);
+  color: var(--text-primary);
+  text-shadow: 0 0 20px var(--accent-glow);
 }
 
 /* ── Nav ── */
@@ -76,7 +81,7 @@
 .banner__nav-list {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.4rem;
   flex-wrap: wrap;
   padding: 0.5rem 1.5rem;
   border-radius: 100px;
@@ -104,8 +109,9 @@
 }
 
 .banner__nav-link:hover,
-.banner__nav-link--btn:hover {
-  color: var(--gold);
+.banner__nav-link--btn:hover,
+.banner__dropdown-link:hover {
+  color: var(--accent);
 }
 
 /* ── Dropdown ── */
@@ -122,7 +128,7 @@
   top: 110%;
   left: 50%;
   transform: translateX(-50%) translateY(-10px);
-  background: var(--nav-blur);
+  background: rgba(40 48 66);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-radius: 12px;
@@ -148,10 +154,6 @@
   transition: color 0.2s ease;
 }
 
-.banner__dropdown-link:hover {
-  color: var(--gold);
-}
-
 .social-icon {
   transition: transform 0.14s ease-in-out;
 }
@@ -160,19 +162,122 @@
 }
 
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+
+/* Animate into X */
+.hamburger--open span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger--open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger--open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 2rem;
+  transform: translateY(-20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu--open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu__link {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #f8fafc;
+  text-decoration: none;
+}
+
+.mobile-menu__link:hover {
+  color: var(--accent);
+}
+
+#FillerHamburger {
+  display: none;
+}
+
+
+/* Desktop & mobile active bubble */
+.banner__nav-item--active > .banner__nav-link,
+.banner__dropdown-link.banner__nav-item--active,
+.mobile-menu__link.banner__nav-item--active {
+  position: relative;
+  color: var(--accent); /* bright teal highlight */
+  background: rgba(56, 189, 248, 0.15);
+  border-radius: 999px;
+  padding: 0.2rem 0.8rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Show on mobile */
+@media (max-width: 860px) {
+  .hamburger {
+    display: flex;
+  }
+}
 /* ── Responsive ── */
-@media (max-width: 768px) {
+@media (max-width: 860px) {
+  .banner__nav {
+    display: none;
+  }
+  #FillerIcons {
+    display: none;
+  }
+  #FillerHamburger {
+    display: flex;
+  }
+
   .banner__inner {
-    flex-direction: column;
     text-align: center;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .banner__avatar-img {
-    width: 120px !important;
-    height: 120px !important;
+    margin-top: 1rem;
+    width: 65px !important;
+    height: 65px !important;
   }
-
+  .banner__name {
+    font-size: 2.1rem;
+    margin-bottom: 0;
+  }
+  .banner__filler {
+    width: 70px;
+  }
+  
   .banner__nav-list {
     justify-content: center;
     padding: 0.5rem;
