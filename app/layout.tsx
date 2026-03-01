@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Banner from "@/components/layout/Banner"
+import Footer from "@/components/layout/Footer"
+import CustomCursor from "@/components/layout/CustomCursor"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -19,7 +21,7 @@ export const metadata : Metadata = {
     default: "Caleb Luebbering",
     template: "%s | Caleb Luebbering",
   },
-  description: "Developer, creative thinker, and lifelong learner. Explore career, passions, scrapbook, and more.",
+  description: "Developer, creative thinker, and learner. Explore career, passions, scrapbook, and more.",
   openGraph: {
     title: "Caleb Luebbering",
     description: "Developer and creative explorer.",
@@ -33,6 +35,10 @@ export const metadata : Metadata = {
       },
     ],
     type: "website",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
   },
     
 };
@@ -48,7 +54,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Banner/>
+        <CustomCursor />
         {children}
+        <Footer />
       </body>
     </html>
   );

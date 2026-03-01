@@ -1,0 +1,356 @@
+:root {
+    --ink: #1a1612;
+    --navy: #0f2557;
+    --navy-mid: #1a4fd6;
+    --muted: #6a5f54;
+    --soft: #9a8c7e;
+    --cream: #faf8f3;
+    --line: rgba(15,37,87,0.1);
+    --tag-bg: rgba(15,37,87,0.07);
+}
+
+.career-page {
+    background: var(--cream);
+    min-height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* ── Hero ── */
+.career-hero {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 6rem 2rem 4rem;
+    position: relative;
+}
+
+.career-hero__eyebrow {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.4rem;
+    
+}
+.career-hero__eyebrow::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--navy);
+}
+
+.career-hero__title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 300;
+    line-height: 1.08;
+    color: var(--ink);
+    margin: 0 0 1.4rem;
+    letter-spacing: -0.02em;
+}
+.career-hero__title em {
+    font-style: italic;
+    color: var(--navy);
+}
+
+.career-hero__bio {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--muted);
+    max-width: 540px;
+    margin: 0 0 2.2rem;
+}
+
+.career-hero__actions {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.btn-resume {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.7rem 1.5rem;
+    border-radius: 100px;
+    background: var(--navy);
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px rgba(15,37,87,0.2);
+}
+.btn-resume:hover {
+    background: var(--navy-mid);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26,79,214,0.3);
+}
+
+/* ── Section layout ── */
+.career-body {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 2rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.section {}
+
+.section__header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 2.4rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.section__title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--ink);
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.section__count {
+    font-size: 0.75rem;
+    color: var(--soft);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+}
+
+/* ── Experience cards ── */
+.exp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+}
+
+.exp-card {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 0 2.5rem;
+}
+
+@media (max-width: 600px) {
+    .exp-card { grid-template-columns: 1fr; gap: 0.6rem; }
+}
+
+.exp-card__meta {
+    padding-top: 0.15rem;
+}
+
+.exp-card__period {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--navy-mid);
+    letter-spacing: 0.04em;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.exp-card__location {
+    font-size: 0.75rem;
+    color: var(--soft);
+}
+
+.exp-card__body {}
+
+.exp-card__role {
+    font-family: 'Fraunces', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 0 0 0.15rem;
+    letter-spacing: -0.01em;
+}
+
+.exp-card__company {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin: 0 0 0.9rem;
+}
+
+.exp-card__bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.exp-card__bullets li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--muted);
+    display: flex;
+    gap: 0.6rem;
+}
+.exp-card__bullets li::before {
+    content: '–';
+    color: var(--navy-mid);
+    flex-shrink: 0;
+    opacity: 0.6;
+}
+
+/* ── Projects grid ── */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.4rem;
+}
+
+.project-card {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.4rem 1.3rem 1.2rem;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.project-card:hover {
+    box-shadow: 0 6px 24px rgba(15,37,87,0.1);
+    transform: translateY(-2px);
+}
+
+.project-card__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.project-card__name {
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.project-card__year {
+    font-size: 0.72rem;
+    color: var(--soft);
+    white-space: nowrap;
+    padding-top: 0.2rem;
+}
+
+.project-card__desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 0;
+    flex: 1;
+}
+
+.project-card__links {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 0.4rem;
+}
+
+.project-link {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--navy);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    letter-spacing: 0.02em;
+    transition: color 0.15s;
+}
+.project-link:hover { color: var(--navy-mid); }
+
+/* ── Education ── */
+.edu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.edu-card {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 0 2.5rem;
+}
+
+@media (max-width: 600px) {
+    .edu-card { grid-template-columns: 1fr; gap: 0.4rem; }
+}
+
+.edu-card__period {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--navy-mid);
+    letter-spacing: 0.04em;
+    padding-top: 0.15rem;
+}
+
+.edu-card__school {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 0 0 0.15rem;
+}
+
+.edu-card__degree {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin: 0 0 0.4rem;
+}
+
+.edu-card__note {
+    font-size: 0.8rem;
+    color: var(--soft);
+    font-style: italic;
+}
+
+/* ── Skills ── */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.8rem;
+}
+
+.skill-group__cat {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--navy-mid);
+    margin: 0 0 0.75rem;
+}
+
+.skill-group__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+/* ── Shared tag pill ── */
+.tag {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--navy);
+    background: var(--tag-bg);
+    border: 1px solid rgba(15,37,87,0.12);
+    border-radius: 100px;
+    padding: 0.25rem 0.7rem;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}

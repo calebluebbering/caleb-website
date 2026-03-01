@@ -34,7 +34,7 @@ export default function Banner({
     { label: "Home", href: "/" },
     { label: "Career", href: "/career" },
     {
-      label: "Passions",
+      label: "Passions", href: "/passions",
       dropdown: [
         { label: "Music", href: "/passions/music" },
         { label: "Movies & TV", href: "/passions/movies" },
@@ -67,16 +67,17 @@ export default function Banner({
                   <li
                     key={item.label}
                     className={`banner__nav-item banner__nav-item--has-dropdown ${
-                      item.dropdown.some((sub) => sub.href === pathname)
+                      item.dropdown.some((sub) => sub.href === pathname) || pathname === item.href
                         ? "banner__nav-item--active"
                         : ""
                     }`}
                     onMouseEnter={() => setPassionsOpen(true)}
                     onMouseLeave={() => setPassionsOpen(false)}
                   >
-                    <button className="banner__nav-link banner__nav-link--btn">
+
+                    <Link href={item.href} className="banner__nav-link banner__nav-link--btn">
                       {item.label} ▾
-                    </button>
+                    </Link>
 
                     <ul
                       className={`banner__dropdown${

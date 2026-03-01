@@ -1,0 +1,105 @@
+.cursor-root * { pointer-events: none; }
+
+.cursor-root {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* ── Main dot ── */
+.cursor-dot {
+    position: fixed;
+    top: 0; left: 0;
+    width: 10px;
+    height: 10px;
+    margin: -5px 0 0 -5px;
+    border-radius: 50%;
+    background: #0f2557;
+    will-change: transform;
+    transition: width 0.15s ease, height 0.15s ease, margin 0.15s ease, background 0.15s ease;
+    box-shadow: 0 0 0 1.5px rgba(15,37,87,0.3);
+}
+.cursor-dot.clicking {
+    width: 7px; height: 7px;
+    margin: -3.5px 0 0 -3.5px;
+    background: #1a4fd6;
+}
+.cursor-dot.hovering {
+    width: 3px; height: 3px;
+    margin: -3px 0 0 -3px;
+    background: #1a4fd6;
+}
+
+/* ── Outer ring ── */
+.cursor-ring {
+    position: fixed;
+    top: 0; left: 0;
+    width: 36px;
+    height: 36px;
+    margin: -18px 0 0 -18px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(15,37,87,0.55);
+    will-change: transform;
+    transition:
+    width 0.2s ease,
+    height 0.2s ease,
+    margin 0.2s ease,
+    border-color 0.2s ease,
+    border-width 0.2s ease;
+}
+.cursor-ring.clicking {
+    width: 28px; height: 28px;
+    margin: -14px 0 0 -14px;
+    border-color: rgba(26,79,214,0.7);
+    border-width: 2px;
+}
+.cursor-ring.hovering {
+    width: 48px; height: 48px;
+    margin: -24px 0 0 -24px;
+    border-color: rgba(26,79,214,0.6);
+    border-width: 1.5px;
+}
+
+/* ── Glow ── */
+.cursor-glow {
+    position: fixed;
+    top: 0; left: 0;
+    width: 80px;
+    height: 80px;
+    margin: -40px 0 0 -40px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(26,79,214,0.18) 0%, transparent 70%);
+    will-change: transform;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+.cursor-glow.clicking {
+    animation: glow-pulse 0.35s ease forwards;
+}
+
+@keyframes glow-pulse {
+    0%   { transform: var(--glow-transform) scale(1);   opacity: 1; }
+    50%  { transform: var(--glow-transform) scale(2.2); opacity: 0.6; }
+    100% { transform: var(--glow-transform) scale(1);   opacity: 1; }
+}
+
+/* ── Trail dots ── */
+.cursor-trail-dot {
+    position: fixed;
+    top: 0; left: 0;
+    border-radius: 50%;
+    background: #0f2557;
+    pointer-events: none;
+    will-change: transform, opacity;
+    animation: trail-fade 0.55s ease forwards;
+}
+
+@keyframes trail-fade {
+    0%   { opacity: 0.55; transform: var(--trail-pos) scale(1); }
+    100% { opacity: 0;    transform: var(--trail-pos) scale(0.2); }
+}
+
+/* ── Hidden when not visible ── */
+.cursor-hidden { opacity: 0 !important; }
