@@ -36,9 +36,9 @@ export default function Banner({
     {
       label: "Passions", href: "/passions",
       dropdown: [
-        { label: "Music", href: "/passions/music" },
-        { label: "Movies & TV", href: "/passions/movies" },
-        { label: "Books", href: "/passions/books" },
+        { label: "Music", href: "/passions#music" },
+        { label: "Movies & TV", href: "/passions#film" },
+        { label: "Books", href: "/passions#books" },
       ],
     },
     { label: "Scrapbook", href: "/scrapbook" },
