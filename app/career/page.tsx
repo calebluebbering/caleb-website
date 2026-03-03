@@ -33,7 +33,7 @@ const EXPERIENCE: {
     location: "Jefferson City, MO",  
     bullets: [
       "Developed internal .NET MVC webapps - including the company intranet.",
-      "Created .NET console applications - reducing script runtime by over 90%",
+      "Created .NET console applications - reducing script runtime by over 90%.",
       "Designed databases for scalability and flexibility.",
     ],
     tags: [".NET", "C#", "Bootstrap"], 
@@ -102,7 +102,7 @@ const PROJECTS: {
     name: "Wordle Helper",
     description: "My first big coding project, done in high school. Inspired by my entire family playing Wordle every day. Might defeat the purpose but at least I win.",
     tags: ["UWP", "C#", "XAML"],    
-    url: "https://github.com/calebluebbering/wordle-helper",     
+    github: "https://github.com/calebluebbering/wordle-helper",     
     year: "2022",       
   },
 ];
@@ -119,7 +119,7 @@ const EDUCATION: {
     degree: "B.S.", 
     field: "Computer Science", 
     period: "2022-2025", 
-    note: "Minor in Mathematics · 3.5 GPA · Dean's List", 
+    note: "Minor in Mathematics · 3.5 GPA · Dean's List · Web Programming Certificate", 
   },
 ];
 
