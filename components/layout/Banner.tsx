@@ -58,7 +58,11 @@ export default function Banner({
         </div>
 
         <div className="banner__center">
-          <h1 className="banner__name">{name}</h1>
+          <h1 className="banner__name">
+            <Link href="/" className="banner__name-link">
+              {name}
+            </Link>
+          </h1>
 
           <nav className="banner__nav">
             <ul className="banner__nav-list">
