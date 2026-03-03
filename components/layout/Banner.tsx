@@ -34,14 +34,14 @@ export default function Banner({
     { label: "Home", href: "/" },
     { label: "Career", href: "/career" },
     {
-      label: "Passions", href: "/passions",
+      label: "Hobbies", href: "/hobbies",
       dropdown: [
-        { label: "Music", href: "/passions#music" },
-        { label: "Movies & TV", href: "/passions#film" },
-        { label: "Books", href: "/passions#books" },
+        { label: "Music", href: "/hobbies#music" },
+        { label: "Movies & TV", href: "/hobbies#film" },
+        { label: "Books", href: "/hobbies#books" },
       ],
     },
-    { label: "Scrapbook", href: "/scrapbook" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (

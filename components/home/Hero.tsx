@@ -36,7 +36,7 @@ export default function Hero() {
             <a href="/career" className="btn btn--primary">
               View My Work <span className="btn-arrow">→</span>
             </a>
-            <a href="/passions" className="btn btn--ghost">
+            <a href="/hobbies" className="btn btn--ghost">
               Explore My World <span className="btn-arrow">→</span>
             </a>
           </div>

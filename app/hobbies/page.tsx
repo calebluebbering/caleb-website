@@ -11,30 +11,35 @@ export const metadata: Metadata = {
 
 const HERO = {
   eyebrow: "beyond the screen",
-  title: "things I love",                        // ✏️
-  subtitle: "I love coding, but there are some other things I love divvying up my free time to. My (mostly) daily habits include going to the gym, playing the guitar, and working on a side project. Also obviously hanging out with friends and family, as I am very much a people person.",
+  title: "stuff I love",                        // ✏️
+  subtitle: "I love coding, but there are some other things I love divvying up my free time to. My (mostly) daily habits include going to the gym, playing the guitar, and working on a side project, whether it be coding related or not. Also obviously hanging out with friends and family, as I am very much a people person.",
   subtitle2: "When I'm not creating, I'm consuming! I love finding new things and sharing what I am passionate about, specifically music and film! (I'm always taking suggestions)",
 };
 
 // ── MUSIC ────────────────────────────────────────────────────
 
 const MUSIC = {
-  intro: "I try to listen to everything, but there are some artists and albums I cannot escape.",  // ✏️
+  intro: '"What is this earth without art, just a rock." - Timothée Chalamet',  // ✏️
 
   favoriteArtists: [
-    { name: "Phoebe Bridgers",   genre: "Indie Folk",    note: "Quietly devastating every time." },  // ✏️
-    { name: "Chet Baker",        genre: "Jazz",          note: "Sunday morning, every morning." },   // ✏️
-    { name: "Mitski",            genre: "Alt / Indie",   note: "Unmatched emotional precision." },   // ✏️
-    { name: "Mac DeMarco",       genre: "Lo-fi Rock",    note: "Perpetually on my summer playlist." }, // ✏️
-    { name: "John Coltrane",     genre: "Jazz",          note: "A Giant Steps above the rest." },    // ✏️
-    { name: "Sufjan Stevens",    genre: "Folk / Classical", note: "Makes me feel things I can't name." }, // ✏️
+    { name: "Radiohead",   genre: "Alt Rock",    note: "Subterranean Homesick Alien" },  // ✏️
+    { name: "Pink Floyd",        genre: "Psychedelic Rock",          note: "Dogs" },   // ✏️
+    { name: "Oasis",            genre: "Alt Rock / Britpop",   note: "Don't Look Back In Anger" },   // ✏️
+    { name: "Bob Dylan",       genre: "Folk / Rock",    note: "Rainy Day Women #12 & #35" }, // ✏️
+    { name: "Deftones",    genre: "Alt Metal", note: "My Own Summer (Shove It)" },
+    { name: "The Sundays",     genre: "Indie Pop / Dream Pop",          note: "Life Goes On" },    // ✏️
+    { name: "The Kid LAROI",    genre: "Hip-Hop", note: "I DON'T KNOW" },
+    { name: "Playboi Carti",    genre: "Rage", note: "Sky" },
   ],
 
   favoriteAlbums: [
-    { title: "punisher",              artist: "Phoebe Bridgers",  year: "2020", emoji: "🌙" }, // ✏️
-    { title: "Kind of Blue",          artist: "Miles Davis",      year: "1959", emoji: "🎷" }, // ✏️
-    { title: "Be the Cowboy",         artist: "Mitski",           year: "2018", emoji: "🌾" }, // ✏️
-    { title: "Illinois",              artist: "Sufjan Stevens",   year: "2005", emoji: "🌻" }, // ✏️
+    { title: "The Bends",         artist: "Radiohead",           year: "1995", emoji: "🥀" }, // ✏️
+    { title: "The Dark Side of the Moon",              artist: "Pink Floyd",  year: "1973", emoji: "🌈" }, // ✏️
+    { title: "Static & Silence",          artist: "The Sundays",      year: "1997", emoji: "🌙" }, // ✏️
+    { title: "OK Computer",         artist: "Radiohead",           year: "1995", emoji: "👽" }, // ✏️
+    { title: "Nevermind",              artist: "Nirvana",   year: "1991", emoji: "🌊" }, // ✏️
+    { title: "Stick Season",              artist: "Noah Kahan",   year: "2022", emoji: "⛰️" },
+    { title: "Charm",              artist: "Clairo",   year: "2024", emoji: "🌿" },
   ],
 
   currentlyListening: "Javelin by Sufjan Stevens — can't stop, won't stop.",  // ✏️ or set to ""
@@ -43,82 +48,48 @@ const MUSIC = {
 // ── MOVIES & TV ──────────────────────────────────────────────
 
 const SCREEN = {
-  intro: "I tend toward slow films, beautiful cinematography, and shows that trust the viewer to keep up.",  // ✏️
+  intro: `"You should enjoy the little detours to the fullest. Because that's where you'll find the things more important than what you want." - Ging Freecss`,
 
   favoriteFilms: [
-    { title: "Eternal Sunshine of the Spotless Mind", year: "2004", note: "Perfect in every way.", emoji: "🧠" }, // ✏️
-    { title: "Portrait of a Lady on Fire",            year: "2019", note: "The most beautiful film I've ever seen.", emoji: "🔥" }, // ✏️
-    { title: "Her",                                   year: "2013", note: "Wrecked me the first time.", emoji: "💌" }, // ✏️
-    { title: "Spirited Away",                         year: "2001", note: "Still magical at any age.", emoji: "🐉" }, // ✏️
-    { title: "Moonlight",                             year: "2016", note: "Filmmaking as poetry.", emoji: "🌊" }, // ✏️
+    { title: "Dead Poets Society", year: "1989", note: "My favorite movie! Do what you love with your life!", emoji: "🎓" }, // ✏️
+    { title: "Harry Potter",            year: "2001", note: "All of them!", emoji: "🪄" }, // ✏️
+    { title: "Monty Python & The Holy Grail",                                   year: "1975", note: "Tis but a scratch.", emoji: "🐇" }, // ✏️
+    { title: "Dune 2",                         year: "2024", note: "Lisan al-Gaib", emoji: "🐛" }, // ✏️
+    { title: "Interstellar",                         year: "2014", note: "Makes me go down space rabbit holes. Who knows about spaghettification?", emoji: "🪐" }, // ✏️
   ],
 
   favoriteShows: [
-    { title: "Succession",      seasons: "4 seasons", note: "The greatest drama ever made, no notes.", emoji: "👔" }, // ✏️
-    { title: "Fleabag",         seasons: "2 seasons", note: "Broke my heart twice.", emoji: "🩸" }, // ✏️
-    { title: "The Bear",        seasons: "3 seasons", note: "Stressful. Brilliant. Addictive.", emoji: "🐻" }, // ✏️
-    { title: "Severance",       seasons: "2 seasons", note: "Nothing like it on TV right now.", emoji: "🏢" }, // ✏️
-    { title: "Nathan For You",  seasons: "4 seasons", note: "Deeply unsettling comedy genius.", emoji: "📋" }, // ✏️
+    { title: "Attack on Titan",      seasons: "4 seasons", note: "Easily my favorite ever. Greatest story ever written.", emoji: "🧣" },
+    { title: "Game of Thrones",         seasons: "8 seasons", note: "Great world, characters, and unpredictable as heck!", emoji: "⚔️" }, // ✏️
+    { title: "Gravity Falls",        seasons: "2 seasons", note: "Loved this growing up. Comforting mysteries tied together with an overarching narrative.", emoji: "❓" }, // ✏️
+    { title: "Hunter x Hunter",       seasons: "6 seasons", note: "So adventurous and everyone can connect with at least one character (there are so many) !", emoji: "🌲" }, // ✏️
+    { title: "The Flash",  seasons: "9 seasons (only watch first 3-4)", note: "Obsessed over all the CW shows then they were airing.", emoji: "⚡" }, // ✏️
   ],
 
-  currentlyWatching: "Finishing up The Rehearsal — Nathan Fielder is in a league of his own.",  // ✏️ or set to ""
 };
 
 // ── BOOKS ────────────────────────────────────────────────────
 
 const BOOKS = {
-  intro: "I read slowly and underline everything. Mostly literary fiction, some non-fiction, the occasional sci-fi spiral.",  // ✏️
+  intro: "I just started reading, give me some time to catch up.",
 
   favorites: [
     {
-      title: "The Left Hand of Darkness",
-      author: "Ursula K. Le Guin",
-      genre: "Sci-Fi",
-      note: "Changed how I think about identity and society.",
-      emoji: "❄️",
-    }, // ✏️
+      title: "Sunrise on the Reaping",
+      author: "Suzanne Collins",
+      genre: "Dystopian Fiction",
+      note: "What I consider my first actual book I read (at 22 years old 💪). I cannot wait to walk out of the theater and get to tell people the book was better.",
+      emoji: "🕊️",
+    },
     {
-      title: "Piranesi",
-      author: "Susanna Clarke",
-      genre: "Fantasy",
-      note: "Strange, quiet, and utterly unlike anything else.",
-      emoji: "🐟",
+      title: "A Tale of Two Cities",
+      author: "Charles Dickens",
+      genre: "Historical Fiction",
+      note: "Favorite book from high school. Made me obsessed with literary elements as I was watching Attack on Titan simultaneously.",
+      emoji: "⚖️",
     }, // ✏️
-    {
-      title: "Normal People",
-      author: "Sally Rooney",
-      genre: "Literary Fiction",
-      note: "Uncomfortably real. Read it in one sitting.",
-      emoji: "📎",
-    }, // ✏️
-    {
-      title: "Stoner",
-      author: "John Williams",
-      genre: "Literary Fiction",
-      note: "The saddest, most beautiful book I've ever read.",
-      emoji: "🍂",
-    }, // ✏️
-    {
-      title: "Sapiens",
-      author: "Yuval Noah Harari",
-      genre: "Non-Fiction",
-      note: "Made me rethink everything I thought I knew.",
-      emoji: "🌍",
-    }, // ✏️
-    {
-      title: "The Dispossessed",
-      author: "Ursula K. Le Guin",
-      genre: "Sci-Fi",
-      note: "Le Guin doing what only Le Guin can do.",
-      emoji: "🪐",
-    }, // ✏️
+    
   ],
-
-  currentlyReading: {
-    title: "Piranesi",     // ✏️
-    author: "Susanna Clarke", // ✏️
-    progress: 68,             // ✏️ percentage 0–100
-  },
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -134,7 +105,7 @@ export default function HobbiesPage() {
         :root {
           --ink:       #1c1712;
           --navy:      #0f2557;
-          --accent:    #1a4fd6;
+          --page-accent:    #1a4fd6;
           --muted:     #6a5f54;
           --soft:      #9a8c7e;
           --cream:     #faf8f3;
@@ -163,7 +134,7 @@ export default function HobbiesPage() {
           font-weight: 500;
           letter-spacing: 0.18em;
           text-transform: uppercase;
-          color: var(--accent);
+          color: var(--page-accent);
           display: flex;
           align-items: center;
           gap: 0.5rem;
@@ -172,7 +143,7 @@ export default function HobbiesPage() {
         .hobbies-hero__eyebrow::before {
           content: '';
           width: 22px; height: 1px;
-          background: var(--accent);
+          background: var(--page-accent);
         }
 
         .hobbies-hero__title {
@@ -256,7 +227,7 @@ export default function HobbiesPage() {
         .currently-bar__dot {
           width: 8px; height: 8px;
           border-radius: 50%;
-          background: var(--accent);
+          background: var(--page-accent);
           flex-shrink: 0;
           animation: pulse-dot 2s ease-in-out infinite;
         }
@@ -271,7 +242,7 @@ export default function HobbiesPage() {
           font-weight: 500;
           letter-spacing: 0.12em;
           text-transform: uppercase;
-          color: var(--accent);
+          color: var(--page-accent);
           flex-shrink: 0;
         }
 
@@ -325,7 +296,7 @@ export default function HobbiesPage() {
           font-weight: 500;
           letter-spacing: 0.08em;
           text-transform: uppercase;
-          color: var(--accent);
+          color: var(--page-accent);
           margin: 0 0 0.35rem;
         }
 
@@ -454,7 +425,7 @@ export default function HobbiesPage() {
           width: 6px;
           flex-shrink: 0;
           border-radius: 3px;
-          background: linear-gradient(180deg, var(--accent) 0%, var(--navy) 100%);
+          background: linear-gradient(180deg, var(--page-accent) 0%, var(--navy) 100%);
           opacity: 0.35;
         }
 
@@ -465,7 +436,7 @@ export default function HobbiesPage() {
           font-weight: 500;
           letter-spacing: 0.12em;
           text-transform: uppercase;
-          color: var(--accent);
+          color: var(--page-accent);
           margin: 0 0 0.3rem;
         }
 
@@ -533,7 +504,7 @@ export default function HobbiesPage() {
         .reading-now__pct {
           font-size: 0.72rem;
           font-weight: 500;
-          color: var(--accent);
+          color: var(--page-accent);
           white-space: nowrap;
         }
 
@@ -548,7 +519,7 @@ export default function HobbiesPage() {
         .progress-fill {
           height: 100%;
           border-radius: 2px;
-          background: linear-gradient(90deg, var(--navy), var(--accent));
+          background: linear-gradient(90deg, var(--navy), var(--page-accent));
         }
 
         /* ── Divider between sub-sections ── */
@@ -591,15 +562,8 @@ export default function HobbiesPage() {
               <h2 className="h-section__title">Music</h2>
             </div>
 
-            {/*<p className="h-section__intro">{MUSIC.intro}</p>*/}
+            <p className="h-section__intro">{MUSIC.intro}</p>
 
-            {MUSIC.currentlyListening && (
-              <div className="currently-bar">
-                <span className="currently-bar__dot" />
-                <span className="currently-bar__label">Now playing</span>
-                <span className="currently-bar__text">{MUSIC.currentlyListening}</span>
-              </div>
-            )}
 
             <p className="sub-label">Favorite Artists</p>
             <div className="artist-grid">
@@ -638,14 +602,6 @@ export default function HobbiesPage() {
             </div>
 
             <p className="h-section__intro">{SCREEN.intro}</p>
-
-            {SCREEN.currentlyWatching && (
-              <div className="currently-bar">
-                <span className="currently-bar__dot" />
-                <span className="currently-bar__label">Currently watching</span>
-                <span className="currently-bar__text">{SCREEN.currentlyWatching}</span>
-              </div>
-            )}
 
             <p className="sub-label">Favorite Films</p>
             <div className="media-grid" style={{ marginBottom: "2rem" }}>
@@ -689,24 +645,8 @@ export default function HobbiesPage() {
 
             <p className="h-section__intro">{BOOKS.intro}</p>
 
-            {/* Currently reading */}
-            <div className="reading-now">
-              <div className="reading-now__top">
-                <div className="reading-now__info">
-                  <p className="reading-now__title">📖 {BOOKS.currentlyReading.title}</p>
-                  <p className="reading-now__author">{BOOKS.currentlyReading.author}</p>
-                </div>
-                <span className="reading-now__pct">{BOOKS.currentlyReading.progress}%</span>
-              </div>
-              <div className="progress-track">
-                <div
-                  className="progress-fill"
-                  style={{ width: `${BOOKS.currentlyReading.progress}%` }}
-                />
-              </div>
-            </div>
 
-            <p className="sub-label">All-Time Favorites</p>
+            <p className="sub-label">Favorites</p>
             <div className="books-grid">
               {BOOKS.favorites.map((b, i) => (
                 <div className="book-card" key={i}>

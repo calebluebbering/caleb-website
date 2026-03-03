@@ -34,7 +34,7 @@ export default function Footer() {
             <span className="footer__sep" aria-hidden="true" />
             <Link href="/career" className="footer__link">Career</Link>
             <span className="footer__sep" aria-hidden="true" />
-            <Link href="/passions" className="footer__link">Passions</Link>
+            <Link href="/hobbies" className="footer__link">Hobbies</Link>
             <span className="footer__sep" aria-hidden="true" />
             <Link href="/contact" className="footer__link">Contact</Link>
           </nav>
