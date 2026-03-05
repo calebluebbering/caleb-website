@@ -82,7 +82,6 @@ const PROJECTS: {
     description: "A dynamic campus-based platform designed for any college. Each user's experience is tailored to their institution, creating a localized space where students can share events, connect with peers, and explore what's happening within their own campus community. (Live is not fully functioning)",
     tags: ["React", "Tailwind", "Flask", "MySQL"],       
     github: "https://github.com/calebluebbering/UniVentures",
-    url: "https://univentures.vercel.app/",
     year: "2024", 
   },
   {
