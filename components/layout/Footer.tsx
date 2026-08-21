@@ -27,8 +27,8 @@ export default function Footer() {
             />
             <span className="footer__wordmark">Caleb Luebbering</span>
           </Link>
-
-          {/* Nav */}
+          
+          {/* Nav 
           <nav className="footer__nav" aria-label="Footer navigation">
             <Link href="/" className="footer__link">Home</Link>
             <span className="footer__sep" aria-hidden="true" />
@@ -38,7 +38,7 @@ export default function Footer() {
             <span className="footer__sep" aria-hidden="true" />
             <Link href="/contact" className="footer__link">Contact</Link>
           </nav>
-
+*/}
           <div className="footer__divider" />
 
           {/* Copyright */}
