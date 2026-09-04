@@ -6,8 +6,9 @@ import { useState } from "react";
 const menuItems = [
   { label: "About", href: "/" },
   { label: "Experience", href: "/#experience" },
-  { label: "Projects", href: "/#projects" },
-  { label: "Outside the IDE", href: "/#outside" },
+  { label: "Music", href: "/music" },
+  { label: "Scrapbook", href: "/scrapbook" },
+  { label: "Lore", href: "/lore" },
 ];
 
 export default function SidePane() {

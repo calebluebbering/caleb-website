@@ -57,6 +57,11 @@ a {
   .custom-button-linkedin:hover {
     @apply border-black bg-black text-white;
   }
+
+
+  .custom-button-music:hover {
+    @apply border-[#11ad4e] bg-[#11ad4e] text-white
+  }
 }
 
 .bottom-border {
@@ -179,4 +184,160 @@ a {
     transform: translateY(105vh) translateX(-20px) rotate(360deg);
     opacity: 0;
   }
+}
+
+
+
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  letter-spacing: 0px;
+}
+
+.experience-card {
+  padding: 1.25rem 1.5rem;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.025);
+}
+
+.experience-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.experience-company-info {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.experience-logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.experience-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.experience-company {
+  margin-top: 0.1rem;
+  font-size: 0.85rem;
+  color: #737373;
+  line-height: 1.3;
+}
+
+.experience-date {
+  font-size: 0.75rem;
+  color: #737373;
+  white-space: nowrap;
+}
+
+.experience-details {
+  margin: 0.9rem 0 0 2.2rem;
+  padding-left: 1rem;
+  color: #525252;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.experience-details li {
+  margin-bottom: 0.3rem;
+  padding-left: 0.15rem;
+}
+
+.experience-details li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .experience-card {
+    padding: 1rem;
+  }
+
+  .experience-header {
+    align-items: flex-start;
+  }
+
+  .experience-date {
+    white-space: normal;
+    text-align: right;
+  }
+
+  .experience-details {
+    margin-left: 0;
+    margin-top: 0.75rem;
+  }
+}
+
+
+
+
+
+.lore-dropdown {
+  margin-bottom: 1rem;
+  border: 1px solid rgba(23, 23, 23, 0.12);
+  background: #f5f0e7;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.lore-dropdown:hover {
+  border-color: rgba(23, 23, 23, 0.22);
+  background: #eee7d8;
+}
+
+.lore-dropdown-open {
+  background: #eee7d8;
+  border-color: rgba(23, 23, 23, 0.18);
+}
+
+.lore-dropdown-button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.lore-dropdown-icon {
+  display: flex;
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  border: 1px solid rgba(23, 23, 23, 0.2);
+  font-size: 1.1rem;
+  font-weight: 300;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.lore-dropdown-icon-open {
+  transform: rotate(45deg);
+  border-color: #8d7e64;
+}
+
+.lore-dropdown-answer {
+  max-width: 42rem;
+  padding: 0 1.5rem 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: rgba(23, 23, 23, 0.8);
+  letter-spacing: normal;
 }
