@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://calebluebbering.com"),
 
   title: {
-    default: "Caleb Luebbering | Software Developer",
+    default: "Caleb Luebbering",
     template: "%s | Caleb Luebbering",
   },
 
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Caleb Luebbering | Software Developer",
+    title: "Caleb Luebbering",
     description:
       "The personal website of Caleb Luebbering — software developer, creator, musician, and more.",
     url: "https://calebluebbering.com",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Caleb Luebbering | Software Developer",
+        alt: "Caleb Luebbering",
       },
     ],
     locale: "en_US",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Caleb Luebbering | Software Developer",
+    title: "Caleb Luebbering",
     description:
       "The personal website of Caleb Luebbering — software developer, creator, musician, and more.",
     images: ["/og-image.png"],
