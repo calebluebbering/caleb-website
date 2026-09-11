@@ -17,7 +17,7 @@ export default function Page() {
         <div className="flex flex-col sm:flex-row gap-8">
           <div className="flex-1">
             <p>
-              Hi! I&aposm Caleb, a software engineer and also
+              Hi! I&apos;m Caleb, a software engineer and also
               human being!
             </p>
 
