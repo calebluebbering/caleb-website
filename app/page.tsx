@@ -23,7 +23,7 @@ export default function Page() {
             <br />
 
             <p>
-              I am passionate about creating beautiful, interactive software that people actually use 
+              I am passionate about creating beautiful, clean, interactive software that people use 
               while trying not to obsess too much over making it perfect
               (unless it needs to be, then hooray!).
             </p>
@@ -87,10 +87,6 @@ export default function Page() {
             </a>
           </div>
 
-          <br/>
-          
-          Lore - do I still make youtube videos - no i dont
-          Whats your youtube channel? Im not telling you
           
       </section>
 
