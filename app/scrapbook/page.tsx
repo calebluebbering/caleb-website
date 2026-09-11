@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Page() {
   const photos = [
     {
@@ -55,7 +57,7 @@ export default function Page() {
               className={`scrapbook-item scrapbook-item-${index + 1} ${photo.className}`}
             >
               <div className="scrapbook-image-wrap">
-                <img
+                <Image
                   src={photo.image}
                   alt={photo.title}
                   className="scrapbook-image"

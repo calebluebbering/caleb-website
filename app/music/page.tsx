@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Page() {
   const albums = [
@@ -145,7 +146,7 @@ export default function Page() {
                 <div className="album-row">
                   {shelfAlbums.map((album) => (
                     <div className="album" key={album.title}>
-                      <img
+                      <Image
                         src={album.image}
                         alt={`${album.title} by ${album.artist}`}
                       />
@@ -169,7 +170,7 @@ export default function Page() {
           <div className="now-playing-record">
             <div className="vinyl">
               <div className="vinyl-label">
-                <img src="/images/music/in-rainbows.png" alt="" />
+                <Image src="/images/music/in-rainbows.png" alt="" />
               </div>
 
               <div className="vinyl-center" />

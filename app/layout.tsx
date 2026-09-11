@@ -18,17 +18,31 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500", "600", "700"],
 });
 
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://calebluebbering.com"),
+
   title: {
-    default: "Caleb Luebbering",
+    default: "Caleb Luebbering | Software Developer",
     template: "%s | Caleb Luebbering",
   },
+
   description:
-    "Caleb Luebbering is a software developer building thoughtful, useful software.",
+    "Caleb Luebbering is a software developer building beautiful, useful software and exploring technology, music, and creative projects.",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
   openGraph: {
-    title: "Caleb Luebbering",
+    title: "Caleb Luebbering | Software Developer",
     description:
-      "Caleb Luebbering is a software developer building thoughtful, useful software.",
+      "The personal website of Caleb Luebbering — software developer, creator, musician, and more.",
     url: "https://calebluebbering.com",
     siteName: "Caleb Luebbering",
     images: [
@@ -36,15 +50,26 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Caleb Luebbering",
+        alt: "Caleb Luebbering | Software Developer",
       },
     ],
+    locale: "en_US",
     type: "website",
   },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Caleb Luebbering | Software Developer",
+    description:
+      "The personal website of Caleb Luebbering — software developer, creator, musician, and more.",
+    images: ["/og-image.png"],
+  },
+
   icons: {
     icon: "/favicon.ico",
   },
 };
+
 
 export default function RootLayout({
   children,

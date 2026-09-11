@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Page() {
   const [active, setActive] = useState(false);
@@ -16,7 +17,7 @@ export default function Page() {
         <div className="flex flex-col sm:flex-row gap-8">
           <div className="flex-1">
             <p>
-              Hi! I'm Caleb, a software engineer and also
+              Hi! I&aposm Caleb, a software engineer and also
               human being!
             </p>
 
@@ -44,7 +45,7 @@ export default function Page() {
             onMouseLeave={() => setActive(false)}
             onClick={() => setActive((prev) => !prev)}
           >
-            <img
+            <Image
               src={active ? "/images/bear-hug.jpg" : "/images/graduation.jpg"}
               alt="Caleb Luebbering"
               className="w-full object-cover"
@@ -100,7 +101,7 @@ export default function Page() {
           <div className="experience-card">
             <div className="experience-header">
               <div className="experience-company-info">
-                <img
+                <Image
                   src="/images/farmers-logo.jpg"
                   alt="Farmer Companies"
                   className="experience-logo"
@@ -141,7 +142,7 @@ export default function Page() {
           <div className="experience-card">
             <div className="experience-header">
               <div className="experience-company-info">
-                <img
+                <Image
                   src="/images/farmers-logo.jpg"
                   alt="Farmer Companies"
                   className="experience-logo"
@@ -177,7 +178,7 @@ export default function Page() {
           <div className="experience-card">
             <div className="experience-header">
               <div className="experience-company-info">
-                <img
+                <Image
                   src="/images/diamond-pet-food-logo.png"
                   alt="Diamond Pet Foods"
                   className="experience-logo"
