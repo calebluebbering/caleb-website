@@ -45,11 +45,15 @@ export default function Page() {
             onMouseLeave={() => setActive(false)}
             onClick={() => setActive((prev) => !prev)}
           >
-            <Image
-              src={active ? "/images/bear-hug.jpg" : "/images/graduation.jpg"}
-              alt="Caleb Luebbering"
-              className="w-full object-cover"
-            />
+            <div className="relative w-full aspect-square">
+              <Image
+                src={active ? "/images/bear-hug.jpg" : "/images/graduation.jpg"}
+                alt="Caleb Luebbering"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 256px"
+              />
+            </div>
 
             <p className="text-dark text-center">
               {active ? "Bear hug" : "I'm a bear🐻"}
@@ -62,7 +66,7 @@ export default function Page() {
       <section className="my-container" id="outside">
         <h2 className="section-title">Side Notes</h2>
 
-          <div className="flex gap-4 items-center">
+          <div className="flex flex-wrap gap-4 items-center">
             <a href="/music"
               className="custom-button custom-button-pink"
             >
@@ -86,6 +90,12 @@ export default function Page() {
             >
             Lore
             </a>
+
+            <a href="/games"
+              className="custom-button custom-button-pink"
+            >
+            Games
+            </a>
           </div>
 
           
@@ -104,6 +114,8 @@ export default function Page() {
                 <Image
                   src="/images/farmers-logo.jpg"
                   alt="Farmer Companies"
+                  width={150}
+                  height={150}
                   className="experience-logo"
                 />
 
@@ -145,6 +157,8 @@ export default function Page() {
                 <Image
                   src="/images/farmers-logo.jpg"
                   alt="Farmer Companies"
+                  width={150}
+                  height={150}
                   className="experience-logo"
                 />
 
@@ -181,6 +195,8 @@ export default function Page() {
                 <Image
                   src="/images/diamond-pet-food-logo.png"
                   alt="Diamond Pet Foods"
+                  width={150}
+                  height={150}
                   className="experience-logo"
                 />
 

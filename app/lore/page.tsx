@@ -9,11 +9,11 @@ const lore = [
   },
   {
     question: "Why computer science?",
-    answer: "I was a kid playing video games and wanted to know how they worked. Now I am stuck down an awesome decade-long rabbit hole\n\n I love problem solving and the excitement of figuring something it out \n\nPython was my first language I taught myself in high school. I remember the feeling I had when functions clicked in my head \n\nIt was like... something inside me... awakened",
+    answer: "I was a kid playing video games and wanted to know how they worked. Now I am stuck down an awesome decade-long rabbit hole\n\n I love problem solving and the excitement of figuring something out \n\nPython was my first language I taught myself in high school. I remember the feeling I had when functions clicked in my head \n\nIt was like... something inside me... awakened",
   },
   {
     question: "What video games did you play?",
-    answer: "Fortnite. I have the Black Knight, my biggest flex\n\nNostalgic games for me are New Super Mario Bros, Lego Star Wars, and Call of Duty Zombies"
+    answer: "Fortnite. I have the Black Knight, my biggest flex\n\nNostalgic games for me are New Super Mario Bros, Lego Star Wars, and Call of Duty Zombies\n\nCurrently I am primarily playing Fortnite and Rocket League"
   },
   {
     question: "What is your favorite thing you have built?",

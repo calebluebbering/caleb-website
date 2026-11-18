@@ -149,6 +149,8 @@ export default function Page() {
                       <Image
                         src={album.image}
                         alt={`${album.title} by ${album.artist}`}
+                        width={150}
+                        height={150}
                       />
 
                       <div className="album-label">
@@ -170,7 +172,7 @@ export default function Page() {
           <div className="now-playing-record">
             <div className="vinyl">
               <div className="vinyl-label">
-                <Image src="/images/music/in-rainbows.png" alt="" />
+                <Image src="/images/music/in-rainbows.png" alt="" width={150} height={150}/>
               </div>
 
               <div className="vinyl-center" />

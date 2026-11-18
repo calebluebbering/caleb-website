@@ -61,6 +61,8 @@ export default function Page() {
                   src={photo.image}
                   alt={photo.title}
                   className="scrapbook-image"
+                  width={900}
+                  height={900}
                 />
 
                 {index === 0 && (
